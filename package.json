@@ -24,8 +24,8 @@
     },
     "commands": [
       {
-        "command": "vscode-dvd-bouncer.start",
-        "title": "Start DVD Bouncer",
+        "command": "vscode-dvd-bouncer.showInPanel",
+        "title": "Show DVD Bouncer",
         "category": "DVD Bouncer",
         "icon": "media/dvd.svg"
       }

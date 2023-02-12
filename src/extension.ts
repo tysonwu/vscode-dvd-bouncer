@@ -6,7 +6,8 @@ export function activate(context: vscode.ExtensionContext) {
 
 	// command to start DVD Bouncer
 	context.subscriptions.push(
-		vscode.commands.registerCommand('vscode-dvd-bouncer.start', () => {
+		vscode.commands.registerCommand('vscode-dvd-bouncer.showInPanel', () => {
+			provider.show(context.extensionUri);
 			vscode.window.showInformationMessage('Started DVD Bouncer!');
 		})
 	);
@@ -34,6 +35,27 @@ class DvdBounceViewProvider implements vscode.WebviewViewProvider {
 	constructor(
 		private readonly _extensionUri: vscode.Uri,
 	) { }
+
+	public show(extensionUri: vscode.Uri) {
+		const column = vscode.window.activeTextEditor
+			? vscode.window.activeTextEditor.viewColumn
+			: undefined;
+
+		const panel = vscode.window.createWebviewPanel(
+			DvdBounceViewProvider.viewType,
+			"DVD Bouncer",
+			column || vscode.ViewColumn.One
+		);
+
+		panel.webview.options = {
+			// Allow scripts in the webview
+			enableScripts: true,
+			localResourceRoots: [
+				this._extensionUri
+			]
+		};
+		panel.webview.html = this._getHtmlForWebview(panel.webview);
+	}
 
 	public update(){
 		if (this._view) {
