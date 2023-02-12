@@ -30,7 +30,7 @@ This extension automatically adds the DVD Bounce panel upon installation.
 
 ### Customization
 
-Various options of customization can be done in the settings. Open settings with `Ctrl+,` on Windows/Linux or `Cmd(⌘)+Shift,` on MacOS. Search for "DVD Bouncer" configurations under Extensions.
+Various options of customization can be done in the settings. Open settings with `Ctrl+,` on Windows/Linux or `Cmd(⌘)+Shift+,` on MacOS. Search for "DVD Bouncer" configurations under Extensions.
 
 ### Disabling VSCode DVD Bouncer
 
