@@ -13,16 +13,16 @@ Bringing the classic DVD logo bouncing sreensaver to VSCode.
 This extension brings the famous DVD logo bouncing screensaver to VSCode by adding a panel under Explorer.
 
 - [x] Customizable text
+- [x] Option to show screensaver on main panel
 
 ### **TODO**
 - [ ] Customizable font
 - [ ] Customizable font style
 - [ ] Customizable move speed
 - [ ] Customizable list of colors
-- [ ] Option to enable/disable color changes upon bounce
-- [ ] Option to show screensaver on main panel
+- [ ] Option to enable/disable color changes
 - [ ] Option to use the actual DVD logo
-
+- [ ] To work well with light themes by tuning colors.
 
 ## Using VSCode DVD Bouncer
 
@@ -31,6 +31,10 @@ This extension automatically adds the DVD Bounce panel upon installation.
 ### Customization
 
 Various options of customization can be done in the settings. Open settings with `Ctrl+,` on Windows/Linux or `Cmd(⌘)+Shift+,` on MacOS. Search for "DVD Bouncer" configurations under Extensions.
+
+#### Show in main panel
+
+A separate DVD Bouncer can be created by toggling "DVD Bouncer: Show DVD Bouncer" in the main panel by opening the command palette with `Ctrl+Shift+P` on Windows/Linux or `Cmd(⌘)+Shift+P` on MacOS.
 
 ### Disabling VSCode DVD Bouncer
 

@@ -1,9 +1,7 @@
 #displayText {
   position: absolute;
   background-size: 100% auto;
-  /* color: #fff; */
-  /* font-family: monospace; */
-  /* font-size: 5vw; */
+  /* color: #ff0000; */
 }
 
 #displayText:before {

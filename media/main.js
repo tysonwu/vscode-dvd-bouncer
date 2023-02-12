@@ -5,6 +5,7 @@ window.onload = function(){
         timeout = setTimeout(update, 100);
     }, false);
 
+    const randomDirection = ["ne", "nw", "se", "sw"];
     var box = document.getElementById('displayText'),
         colors = [
             '#ff0000', '#ff4000', '#ff8000', '#ffbf00', '#ffff00', '#bfff00',
@@ -28,11 +29,12 @@ window.onload = function(){
         xMax = win.innerWidth - boxLeft - boxWidth,
         yMax = win.innerHeight - boxTop - boxHeight,
         request = null,
-        direction = 'se',
+        direction = randomDirection[Math.floor(Math.random() * randomDirection.length)],
         speed = 0.5,
         timeout = null;
 
     init();
+    switchColor(); // choose a color upon init
 
     function init() {
         request = requestAnimationFrame(init);
