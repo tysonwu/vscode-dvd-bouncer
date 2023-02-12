@@ -3,6 +3,7 @@
   "displayName": "DVD Bouncer",
   "description": "Bring the famous bouncing DVD logo to VSCode.",
   "version": "1.0.0",
+  "publisher": "tysonwu",
   "author": {
     "name": "Tyson Wu"
   },
@@ -18,6 +19,7 @@
     "url": "https://github.com/tysonwu/vscode-dvd-bouncer.git"
   },
   "homepage": "https://github.com/tysonwu/vscode-dvd-bouncer/blob/main/README.md",
+  "license": "SEE LICENSE IN LICENSE.txt",
   "keywords": ["dvd", "screensaver"],
   "main": "./out/extension.js",
   "contributes": {
