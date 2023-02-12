@@ -13,6 +13,8 @@ Bringing the classic DVD logo bouncing sreensaver to VSCode.
 This extension brings the famous DVD logo bouncing screensaver to VSCode by adding a panel under Explorer.
 
 - [x] Customizable text
+
+### **TODO**
 - [ ] Customizable font
 - [ ] Customizable font style
 - [ ] Customizable move speed
