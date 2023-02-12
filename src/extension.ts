@@ -19,7 +19,11 @@ export function activate(context: vscode.ExtensionContext) {
 
 	// listen to configuration change
 	context.subscriptions.push(vscode.workspace.onDidChangeConfiguration(e => {
-		if (e.affectsConfiguration('DvdBouncer.customText')) {
+		if (
+			e.affectsConfiguration('DvdBouncer.customText') ||
+			e.affectsConfiguration('DvdBouncer.moveSpeed') ||
+			e.affectsConfiguration('DvdBouncer.disableColor')
+		) {
 			provider.update();
 		}
 	}));
@@ -87,6 +91,8 @@ class DvdBounceViewProvider implements vscode.WebviewViewProvider {
 		// Use a nonce to only allow a specific script to be run.
 		const nonce = getNonce();
 		const displayText = vscode.workspace.getConfiguration('DvdBouncer').get('customText');
+		const moveSpeed = vscode.workspace.getConfiguration('DvdBouncer').get('moveSpeed');
+		const disableColor = vscode.workspace.getConfiguration('DvdBouncer').get('disableColor');
 
 		return `<!DOCTYPE html>
 		<html lang="en">
@@ -102,7 +108,7 @@ class DvdBounceViewProvider implements vscode.WebviewViewProvider {
 			<link href="${styleUri}" rel="stylesheet">
 		</head>
 		<body>
-			<script nonce="${nonce}" src="${scriptUri}"></script>
+			<script nonce="${nonce}" src="${scriptUri}" speed="${moveSpeed}" disable-color="${disableColor}"></script>
 			<div id="displayText">${displayText}</div>
 		</body>
 		</html>`;

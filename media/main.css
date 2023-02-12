@@ -1,7 +1,6 @@
 #displayText {
   position: absolute;
   background-size: 100% auto;
-  /* color: #ff0000; */
 }
 
 #displayText:before {

@@ -1,3 +1,13 @@
+function getScriptParams() {
+    var scripts = document.getElementsByTagName('script');
+    var lastScript = scripts[scripts.length-1];
+    var scriptName = lastScript;
+    return {
+        speed : scriptName.getAttribute('speed'),
+        disableColor : scriptName.getAttribute('disable-color'),
+    };
+}
+
 window.onload = function(){
     // reset constraints on resize
     window.addEventListener('resize', function(argument) {
@@ -30,11 +40,14 @@ window.onload = function(){
         yMax = win.innerHeight - boxTop - boxHeight,
         request = null,
         direction = randomDirection[Math.floor(Math.random() * randomDirection.length)],
-        speed = 0.5,
         timeout = null;
 
+        var params = getScriptParams();
+        var speed = +params.speed;
+        var disableColor = (params.disableColor === 'true');
+
     init();
-    switchColor(); // choose a color upon init
+    if (!disableColor) { switchColor(); }; // choose a color upon init
 
     function init() {
         request = requestAnimationFrame(init);
@@ -86,7 +99,7 @@ window.onload = function(){
             } else if (direction === 'ne') {
                 direction = 'se';
             }
-            switchColor();
+            if (!disableColor) { switchColor(); };
         }
         if (translateY >= yMax) {
             if (direction === 'se') {
@@ -94,7 +107,7 @@ window.onload = function(){
             } else if (direction === 'sw') {
                 direction = 'nw';
             }
-            switchColor();
+            if (!disableColor) { switchColor(); };
         }
         if (translateX <= xMin) {
             if (direction === 'nw') {
@@ -102,7 +115,7 @@ window.onload = function(){
             } else if (direction === 'sw') {
                 direction = 'se';
             }
-            switchColor();
+            if (!disableColor) { switchColor(); };
         }
         if (translateX >= xMax) {
             if (direction === 'ne') {
@@ -110,7 +123,7 @@ window.onload = function(){
             } else if (direction === 'se') {
                 direction = 'sw';
             }
-            switchColor();
+            if (!disableColor) { switchColor(); };
         }
     }
 

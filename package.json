@@ -25,7 +25,7 @@
     "commands": [
       {
         "command": "vscode-dvd-bouncer.showInPanel",
-        "title": "Show DVD Bouncer",
+        "title": "Show DVD Bouncer in Active Text Editor",
         "category": "DVD Bouncer",
         "icon": "media/dvd.svg"
       }
@@ -38,6 +38,26 @@
             "type": "string",
             "default": "DVD",
             "description": "Text to display to bounce."
+          }
+        }
+      },
+      {
+        "title": "DVD Bouncer",
+        "properties": {
+          "DvdBouncer.moveSpeed": {
+            "type": "number",
+            "default": 0.5,
+            "description": "Display text move speed."
+          }
+        }
+      },
+      {
+        "title": "DVD Bouncer",
+        "properties": {
+          "DvdBouncer.disableColor": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether to disable colors."
           }
         }
       }
