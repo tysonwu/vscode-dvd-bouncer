@@ -2,7 +2,7 @@
   "name": "vscode-dvd-bouncer",
   "displayName": "DVD Bouncer",
   "description": "Bring the famous bouncing DVD logo to VSCode.",
-  "version": "0.0.1",
+  "version": "1.0",
   "engines": {
     "vscode": "^1.75.0"
   },
