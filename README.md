@@ -4,7 +4,7 @@
 
 Bringing the classic DVD logo bouncing sreensaver to VSCdode.
 
-![screenshot]()
+![screenshot](https://raw.githubusercontent.com/tysonwu/vscode-dvd-bouncer/main/docs/screenshot.gif)
 
 </div>
 
