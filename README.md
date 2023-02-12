@@ -2,7 +2,7 @@
 
 # 📀 VSCode DVD Bouncer 📀
 
-Bringing the classic DVD logo bouncing sreensaver to VSCode.
+Bringing the classic DVD logo bouncing screensaver to VSCode.
 
 ![screenshot](https://raw.githubusercontent.com/tysonwu/vscode-dvd-bouncer/main/docs/screenshot.gif)
 
