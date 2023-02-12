@@ -1,0 +1,17 @@
+#displayText {
+  position: absolute;
+  background-size: 100% auto;
+  /* color: #fff; */
+  /* font-family: monospace; */
+  /* font-size: 5vw; */
+}
+
+#displayText:before {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
