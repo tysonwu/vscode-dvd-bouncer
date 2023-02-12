@@ -2,7 +2,7 @@
 
 # 📀 VSCode DVD Bouncer 📀
 
-*Bringing the classic DVD logo bouncing sreensaver to VSCdode.*
+Bringing the classic DVD logo bouncing sreensaver to VSCdode.
 
 ![screenshot]()
 
